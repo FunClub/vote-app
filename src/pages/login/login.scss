@@ -1,9 +1,9 @@
-#loginForm .button{
+.button{
   height:35px !important;
   line-height: 35px !important;
   font-size:14px;
 }
-#loginForm ion-label{
+ion-label{
   font-size: 14px;
 }
 
@@ -13,5 +13,13 @@ ion-item{
 #loginForm ion-list{
   margin: 0 !important;
 }
+#loginBtn{
 
 
+}
+::-webkit-scrollbar {
+  display: none;
+}
+#preRegisterButton{
+  margin: 0;
+}

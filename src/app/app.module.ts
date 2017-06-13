@@ -8,6 +8,8 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import {LoginPage} from "../pages/login/login";
 import {LoginPageModule} from "../pages/login/login.module";
+import {RegisterPageModule} from "../pages/register/register.module";
+import {RegisterPage} from "../pages/register/register";
 
 @NgModule({
   declarations: [
@@ -17,13 +19,15 @@ import {LoginPageModule} from "../pages/login/login.module";
   imports: [
     BrowserModule,
     LoginPageModule,
+    RegisterPageModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     LoginPage,
-    HomePage
+    HomePage,
+    RegisterPage
   ],
   providers: [
     StatusBar,

@@ -1,0 +1,47 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>歌手注册<ion-icon id="registerImg" name="person-add"></ion-icon></ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding>
+  <div id="registerDiv">
+    <img id="preViewImg" src="../../assets/img/nonePhoto.jpg"/>
+    <form id="registerForm" (ngSubmit)="doRegister()">
+      <ion-list radio-group>
+        <ion-item>
+          <label for="uploadFile">头像</label>
+          <a class="a-upload"><input id="uploadFile" type="file"></a>
+        </ion-item>
+        <ion-item>
+          <ion-label>男</ion-label>
+          <ion-radio checked="true" value="男"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>女</ion-label>
+          <ion-radio value="女"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>账号</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>密码</ion-label>
+          <ion-input type="password"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>确认密码</ion-label>
+          <ion-input type="password"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>昵称</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <button id="registerBtn" type="submit" ion-button block>注册</button>
+        </ion-item>
+      </ion-list>
+    </form>
+  </div>
+</ion-content>
