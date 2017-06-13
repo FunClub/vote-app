@@ -13,12 +13,16 @@ import {AlertController, IonicPage, NavController, NavParams} from 'ionic-angula
   templateUrl: 'register.html',
 })
 export class RegisterPage {
-
+  cityAlertOpts: { title: string, subTitle: string };
   constructor(public alertCtrl: AlertController,public navCtrl: NavController, public navParams: NavParams) {
+    this.cityAlertOpts = {
+      title: '选择城市',
+      subTitle: '这是你的出生地'
+    };
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad RegisterPage');
+
   }
   doRegister(){
     let alert = this.alertCtrl.create({

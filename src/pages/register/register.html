@@ -39,6 +39,22 @@
           <ion-input type="text"></ion-input>
         </ion-item>
         <ion-item>
+          <ion-label>城市</ion-label>
+          <ion-select   cancelText="取消" okText="确定" [selectOptions]="cityAlertOpts">
+            <ion-option value="北京" >北京</ion-option>
+            <ion-option value="上海">上海</ion-option>
+            <ion-option value="广州" >广州</ion-option>
+            <ion-option value="深圳">深圳</ion-option>
+            <ion-option value="东莞">东莞</ion-option>
+            <ion-option value="海南">海南</ion-option>
+            <ion-option value="台湾">台湾</ion-option>
+            <ion-option value="四川">四川</ion-option>
+            <ion-option value="重庆">重庆</ion-option>
+            <ion-option value="武汉">武汉</ion-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
           <button id="registerBtn" type="submit" ion-button block>注册</button>
         </ion-item>
       </ion-list>
