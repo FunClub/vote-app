@@ -1,5 +1,9 @@
 {
   "name": "vote-app",
   "app_id": "",
-  "type": "ionic-angular"
+  "type": "ionic-angular",
+  "proxies": [{
+    "path": "/api",
+    "proxyUrl": "http://127.0.0.1:8080/"
+  }]
 }

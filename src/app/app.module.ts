@@ -10,6 +10,10 @@ import {LoginPage} from "../pages/login/login";
 import {LoginPageModule} from "../pages/login/login.module";
 import {RegisterPageModule} from "../pages/register/register.module";
 import {RegisterPage} from "../pages/register/register";
+import {PlayerModel} from "../model/player.model";
+import {PlayerService} from "../service/player.service";
+import {HttpModule} from "@angular/http";
+
 
 @NgModule({
   declarations: [
@@ -20,7 +24,8 @@ import {RegisterPage} from "../pages/register/register";
     BrowserModule,
     LoginPageModule,
     RegisterPageModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -32,7 +37,9 @@ import {RegisterPage} from "../pages/register/register";
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    PlayerModel,
+    PlayerService
   ]
 })
 export class AppModule {}

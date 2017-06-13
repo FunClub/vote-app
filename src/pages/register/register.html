@@ -7,16 +7,17 @@
 </ion-header>
 <ion-content padding>
   <div id="registerDiv">
-    <img id="preViewImg" src="../../assets/img/nonePhoto.jpg"/>
+    <img id="preViewImg" [src]="playerModel.profile"/>
     <form id="registerForm" (ngSubmit)="doRegister()">
       <ion-list radio-group>
         <ion-item>
           <label for="uploadFile">头像</label>
-          <a class="a-upload"><input id="uploadFile" type="file"></a>
+          <a class="a-upload"><input id="uploadFile" type="file"  (change)="upload($event)" /></a>
+          <span>上传</span>
         </ion-item>
         <ion-item>
           <ion-label>男</ion-label>
-          <ion-radio checked="true" value="男"></ion-radio>
+          <ion-radio checked="true" value="男" ></ion-radio>
         </ion-item>
         <ion-item>
           <ion-label>女</ion-label>
@@ -24,7 +25,7 @@
         </ion-item>
         <ion-item>
           <ion-label floating>账号</ion-label>
-          <ion-input type="text"></ion-input>
+          <ion-input type="text" (blur)="validAccount()"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label floating>密码</ion-label>
