@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title id="addTitle"> <ion-icon id="addLogo" name="add"></ion-icon>添加比赛</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      添加歌手一
+    </ion-card-header>
+    <ion-card-content>
+
+        <ion-item>
+          <ion-label floating>歌手1:</ion-label>
+          <ion-input (focus)="openPlayerModal(1)" [(ngModel)]="matchModel.playId1"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>歌名1:</ion-label>
+          <ion-input  [(ngModel)]="matchModel.song1"></ion-input>
+        </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      添加歌手二
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label floating>歌手2:</ion-label>
+        <ion-input (focus)="openPlayerModal(2)" [(ngModel)]="matchModel.playId2"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>歌名2:</ion-label>
+        <ion-input [(ngModel)]="matchModel.song2"></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <button ion-button color="dark" id="addMatchBtn" block>添加比赛</button>
+</ion-content>

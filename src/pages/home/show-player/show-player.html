@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      选择一位歌手
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="primary" >关闭</span>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+
+  <ion-list *ngIf="playerIndex==1" radio-group>
+    <ion-card *ngFor="let play of plays" >
+      <img [src]="play.profile"/>
+      <ion-card-content>
+        <ion-card-title>
+          {{play.name}}—{{play.city}}
+        </ion-card-title>
+        <p>
+          {{play.description}}
+        </p>
+        <ion-item>
+          <ion-label>选择</ion-label>
+          <ion-radio  value="{{play.playerId}}" (click)="setPlayerId(play.playerId)"></ion-radio>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+  <ion-list *ngIf="playerIndex==2" radio-group ([ngModel])="matchModel.playId2">
+    <ion-card *ngFor="let play of plays">
+      <img [src]="play.profile"/>
+      <ion-card-content>
+        <ion-card-title>
+          {{play.name}}—{{play.city}}
+        </ion-card-title>
+        <p>
+          {{play.description}}
+        </p>
+        <ion-item>
+          <ion-label>选择</ion-label>
+          <ion-radio value="{{play.playerId}}" (click)="setPlayerId(play.playerId)"></ion-radio>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+
+</ion-content>
