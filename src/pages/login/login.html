@@ -1,22 +1,22 @@
 <ion-content id="loginContent">
 
   <div id="loginDiv">
-    <form id="loginForm">
+    <form id="loginForm" (ngSubmit)="doLogin()">
       <ion-list padding>
         <ion-item>
           <ion-label floating>账号</ion-label>
-          <ion-input type="text"></ion-input>
+          <ion-input type="text" name="account" [(ngModel)]="playerModel.account"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label floating>密码</ion-label>
-          <ion-input type="password"></ion-input>
+          <ion-input type="password" name="passwords" [(ngModel)]="playerModel.passwords"></ion-input>
         </ion-item>
 
         <ion-item>
           <button id="loginBtn" ion-button block>登录</button>
         </ion-item>
       </ion-list>
-      <button id="preRegisterButton" (click)="gotoRegister()"  ion-button color="dark" clear>没有账号？</button>
+      <button type="submit" id="preRegisterButton" (click)="gotoRegister()"  ion-button color="dark" clear>没有账号？</button>
     </form>
 
   </div>

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {AlertController, IonicPage, NavController, NavParams} from 'ionic-angular';
 import {PlayerModel} from "../../model/player.model";
 import {PlayerService} from "../../service/player.service";
+import {LoginPage} from "../login/login";
 /**
  * Generated class for the RegisterPage page.
  *
@@ -23,6 +24,7 @@ export class RegisterPage {
       subTitle: '这是你的出生地'
     };
     playerModel.profile="assets/img/nonePhoto.jpg";
+    playerModel.sex="男";
   }
 
   ionViewDidLoad() {
@@ -42,14 +44,19 @@ export class RegisterPage {
 
   }
   doRegister(){
-    this.playerService.getData().subscribe(res=>{
-      console.log(res);
+    this.playerService.register(this.playerModel).subscribe(res=>{
+      if(res){
+        this.navCtrl.push(LoginPage);
+      }else{
+        let alertc = this.alertCtrl.create({
+          title: '注册失败！',
+          subTitle: '请重新注册',
+          buttons: ['OK']
+        });
+        alertc.present();
+      }
     });
-    let alert = this.alertCtrl.create({
-      title: 'New Friend!',
-      subTitle: 'Your friend, Obi wan Kenobi, just accepted your friend request!',
-      buttons: ['OK']
-    });
+
   }
 
   upload(e){

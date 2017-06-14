@@ -1,6 +1,4 @@
-/**
- * Created by Administrator on 2017/6/13.
- */
+
 import {Injectable} from "@angular/core";
 import {Http} from "@angular/http";
 import {Observable} from "rxjs/Observable";
@@ -10,10 +8,14 @@ import {PlayerModel} from "../model/player.model";
 export class PlayerService{
   constructor(private http:Http){
   }
-  getData():Observable<string>{
-    return this.http.get("api/getData").map(res=>res.text());
+  login(playModel:PlayerModel):Observable<boolean>{
+    return this.http.post("login",playModel).map(res=>res.json());
   }
   validAccount(playModel:PlayerModel):Observable<boolean>{
     return this.http.post("api/account",playModel).map(res=>res.json());
+  }
+
+  register(playModel:PlayerModel):Observable<boolean>{
+    return this.http.post("api/player",playModel).map(res=>res.json());
   }
 }
