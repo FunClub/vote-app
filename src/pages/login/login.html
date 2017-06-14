@@ -1,6 +1,7 @@
 <ion-content id="loginContent">
 
   <div id="loginDiv">
+    <img id="loginBG" src="assets/img/loginBG.jpg">
     <form id="loginForm" (ngSubmit)="doLogin()">
       <ion-list padding>
         <ion-item>
@@ -11,14 +12,21 @@
           <ion-label floating>密码</ion-label>
           <ion-input type="password" name="passwords" [(ngModel)]="playerModel.passwords"></ion-input>
         </ion-item>
-
-        <ion-item>
-          <button id="loginBtn" ion-button block>登录</button>
-        </ion-item>
+        <div>
+            <div id="rem">
+                <ion-checkbox id="remcc"   checked="true"></ion-checkbox>
+                <ion-label id="remC">记住账号</ion-label>
+            </div>
+            <button id="toAdminBtn" (click)="gotoAdmin()" type="button" ion-button color="dark" clear>管理员登录</button>
+        </div>
+           
+           <button type="submit" id="loginBtn" ion-button block>登录</button>
+         <div id="loginOpr">
+            <button type="button" id="preRegisterButton" (click)="gotoRegister()" block  ion-button color="dark" >我是歌手，立刻报名！</button>
+          </div>
       </ion-list>
-      <button type="submit" id="preRegisterButton" (click)="gotoRegister()"  ion-button color="dark" clear>没有账号？</button>
     </form>
-
+      
   </div>
-
+  
 </ion-content>

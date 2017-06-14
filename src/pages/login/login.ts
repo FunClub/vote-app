@@ -45,4 +45,8 @@ export class LoginPage {
   gotoRegister(){
     this.navCtrl.push(RegisterPage);
   }
+
+  gotoAdmin(){
+    this.navCtrl.push(HomePage);
+  }
 }

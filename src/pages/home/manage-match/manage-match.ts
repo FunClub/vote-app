@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import {TabsPage} from "./tabs/tabs";
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'manage-match',
+  templateUrl: 'manage-match.html'
 })
-export class HomePage {
-  rootPage=TabsPage;
+export class ManageMatchPage{
   constructor(public navCtrl: NavController) {
 
   }

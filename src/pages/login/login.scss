@@ -15,11 +15,33 @@ ion-item{
 }
 #loginBtn{
 
-
+margin-top: 20px;
 }
 ::-webkit-scrollbar {
   display: none;
 }
 #preRegisterButton{
-  margin: 0;
+
+}
+#loginBG{
+  margin: auto;
+  display: block;
+  margin-top: 30px;
+}
+#rem{
+  margin-top: 10px !important;
+  display: inline-block;
+
+}
+#remC{
+  display: inline !important;
+  margin-left: 5px;
+}
+#loginOpr{
+  margin-top: 20px;
+
+}
+
+#toAdminBtn{
+  float: right;
 }

@@ -13,17 +13,22 @@ import {RegisterPage} from "../pages/register/register";
 import {PlayerModel} from "../model/player.model";
 import {PlayerService} from "../service/player.service";
 import {HttpModule} from "@angular/http";
+import {HomePageModule} from "../pages/home/home.module";
+import {TabsPage} from "../pages/home/tabs/tabs";
+import {AddMatchPage} from "../pages/home/add-match/add-match";
+import {ManageMatchPage} from "../pages/home/manage-match/manage-match";
+import {ShowPlayerPage} from "../pages/home/show-player/show-player";
 
 
 @NgModule({
   declarations: [
-    MyApp,
-    HomePage
+    MyApp
   ],
   imports: [
     BrowserModule,
     LoginPageModule,
     RegisterPageModule,
+    HomePageModule,
     IonicModule.forRoot(MyApp),
     HttpModule
   ],
@@ -32,7 +37,12 @@ import {HttpModule} from "@angular/http";
     MyApp,
     LoginPage,
     HomePage,
-    RegisterPage
+    RegisterPage,
+    AddMatchPage,
+    TabsPage,
+    ManageMatchPage,
+    ShowPlayerPage
+
   ],
   providers: [
     StatusBar,

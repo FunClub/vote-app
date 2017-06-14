@@ -6,5 +6,5 @@ export class PlayerModel{
   sex:string;
   profile:string;
   city:string;
-
+  description:string;
 }

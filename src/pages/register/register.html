@@ -1,7 +1,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>歌手注册<ion-icon id="registerImg" name="person-add"></ion-icon></ion-title>
+    <ion-title>歌手报名<ion-icon id="registerImg" name="person-add"></ion-icon></ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -40,6 +40,10 @@
         <ion-item>
           <ion-label floating>昵称</ion-label>
           <ion-input type="text" name="name" [(ngModel)]="playerModel.name"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>简介</ion-label>
+          <ion-input type="text" name="description" [(ngModel)]="playerModel.description"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label>城市</ion-label>
