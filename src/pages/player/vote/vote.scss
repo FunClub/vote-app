@@ -1,0 +1,40 @@
+.player{
+  display: inline-block;
+  width: 45%;
+  margin-left: 10px;
+
+  text-align: center;
+}
+.playerLeft{
+  text-align: center;
+}
+#vsLogo{
+  width: 20%;
+  top:0;
+  left: 38%;
+  position: absolute;
+}
+.eachMatch{
+  position: relative;
+}
+.profile{
+  width: 60%;
+  border-radius: 60%;
+  display: inline-block;
+}
+.playerInfo{
+  margin-top: 10px;
+}
+.playerName{
+  font-size: 16px !important;
+  font-weight: bold !important;
+}
+.good{
+  margin-left: 10px;
+}
+ion-title{
+  text-align: center;
+}
+ion-title ion-icon{
+  margin-right: 10px!important;
+}

@@ -1,0 +1,25 @@
+<ion-card-header>
+  《{{match.song1}}》PK《{{match.song2}}》
+</ion-card-header>
+<ion-card-content>
+  <div class="eachMatch">
+    <div class="player">
+      <img class="profile" [src]="match.player1.profile" (click)="showPlayInfo(match.player1,match.song1,match.vote1)"/>
+      <div class="playerInfo">
+        <p class="playerName">{{match.player1.name}}</p>
+      </div>
+      <button (click)="addVote(match,1)" *ngIf="match.player1.sex=='女'" ion-button block color="danger">{{match.vote1}}票 <ion-icon class="good" name="thumbs-up"></ion-icon></button>
+      <button (click)="addVote(match,1)" *ngIf="match.player1.sex=='男'" ion-button block color="dark">{{match.vote1}}票 <ion-icon class="good" name="thumbs-up"></ion-icon></button>
+    </div>
+    <img src="../../../assets/img/VS.png" id="vsLogo"/>
+    <div class="player">
+      <img class="profile" [src]="match.player2.profile" (click)="showPlayInfo(match.player2,match.song2,match.vote2)"/>
+      <div class="playerInfo">
+        <p class="playerName">{{match.player2.name}}</p>
+      </div>
+
+      <button (click)="addVote(match,2)" *ngIf="match.player2.sex=='女'" ion-button block color="danger">{{match.vote2}}票 <ion-icon class="good" name="thumbs-up"></ion-icon></button>
+      <button (click)="addVote(match,2)" *ngIf="match.player2.sex=='男'" ion-button block color="dark">{{match.vote2}}票 <ion-icon class="good" name="thumbs-up"></ion-icon></button>
+    </div>
+  </div>
+</ion-card-content>
