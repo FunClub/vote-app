@@ -8,6 +8,7 @@ import {PlayerModel} from "../model/player.model";
 export class PlayerService{
   constructor(private http:Http){
   }
+
   selectAllPlayer():Observable<PlayerModel[]>{
     return this.http.get("api/player").map(res=>res.json());
   }

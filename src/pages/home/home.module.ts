@@ -7,6 +7,8 @@ import {TabsPage} from "./tabs/tabs";
 import {ManageMatchPage} from "./manage-match/manage-match";
 import {ShowPlayerPage} from "./show-player/show-player";
 import {MatchModel} from "../../model/match.model";
+import {MatchService} from "../../service/match.service";
+import {PlayerPageModule} from "../player/player.module";
 
 @NgModule({
   declarations: [
@@ -14,11 +16,12 @@ import {MatchModel} from "../../model/match.model";
   ],
   imports: [
     IonicPageModule.forChild(HomePage),
-    FormsModule
+    FormsModule,
+    PlayerPageModule
   ],
   exports: [
    HomePage,AddMatchPage,TabsPage,ManageMatchPage,ShowPlayerPage
   ],
-  providers:[MatchModel]
+  providers:[MatchModel,MatchService]
 })
 export class HomePageModule {}

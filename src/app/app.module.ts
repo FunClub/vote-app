@@ -18,8 +18,12 @@ import {TabsPage} from "../pages/home/tabs/tabs";
 import {AddMatchPage} from "../pages/home/add-match/add-match";
 import {ManageMatchPage} from "../pages/home/manage-match/manage-match";
 import {ShowPlayerPage} from "../pages/home/show-player/show-player";
-
-
+import {PlayerPageModule} from "../pages/player/player.module";
+import {PlayerTabsPage} from "../pages/player/player-tabs/player-tabs";
+import {VotePage} from "../pages/player/vote/vote";
+import {RankPage} from "../pages/player/rank/rank";
+import {AboutPage} from "../pages/player/about/about";
+import { VsComponent } from '../pages/player/vs/vs';
 @NgModule({
   declarations: [
     MyApp
@@ -29,6 +33,7 @@ import {ShowPlayerPage} from "../pages/home/show-player/show-player";
     LoginPageModule,
     RegisterPageModule,
     HomePageModule,
+    PlayerPageModule,
     IonicModule.forRoot(MyApp),
     HttpModule
   ],
@@ -41,8 +46,11 @@ import {ShowPlayerPage} from "../pages/home/show-player/show-player";
     AddMatchPage,
     TabsPage,
     ManageMatchPage,
-    ShowPlayerPage
-
+    ShowPlayerPage,
+    PlayerTabsPage,
+    VotePage,
+    RankPage,
+    AboutPage
   ],
   providers: [
     StatusBar,

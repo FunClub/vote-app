@@ -1,10 +1,25 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>管理比赛</ion-title>
+    <ion-title><ion-icon name="briefcase"></ion-icon>管理比赛</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
+  <ion-card *ngFor="let match of matchs">
+    <vs [match]="match"></vs>
+    <ion-list id="matchPro">
+      <ion-item >
+        <ion-label>状态</ion-label>
+        <ion-toggle color="energized" (click)="toggleStatus()" [(ngModel)]="match.status" ></ion-toggle>
+      </ion-item>
+      <ion-item >
+        <button id="deleteMatchBtn" (click)="deleteMatch(match)" outline block ion-button color="danger" icon-left>
+          <ion-icon name='trash' ></ion-icon>
+          删除比赛
+        </button>
+      </ion-item>
+    </ion-list>
+
+  </ion-card>
 
 </ion-content>

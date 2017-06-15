@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+
+      <ion-icon id="voteLogo" name="contact"></ion-icon>歌手信息
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="primary" >关闭</span>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <img id="playerProfie" [src]="play.profile"/>
+  <h3>{{play.name}}、{{play.city}}</h3>
+  <p>《{{song}}》</p>
+  <p>{{play.description}}</p>
+  <button *ngIf="play.sex=='女'" ion-button block color="danger">{{vote}}票 <ion-icon class="good" name="thumbs-up"></ion-icon></button>
+  <button *ngIf="play.sex=='男'" ion-button block color="dark">{{vote}}票 <ion-icon class="good" name="thumbs-up"></ion-icon></button>
+</ion-content>

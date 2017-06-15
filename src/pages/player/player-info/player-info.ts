@@ -4,26 +4,25 @@ import {PlayerService} from "../../../service/player.service";
 import {PlayerModel} from "../../../model/player.model";
 import {MatchModel} from "../../../model/match.model";
 @Component({
-  selector: 'show-player',
-  templateUrl: 'show-player.html'
+  selector: 'player-info',
+  templateUrl: 'player-info.html'
 })
-export class ShowPlayerPage{
-  plays:PlayerModel[];
-  playerIndex:number;
+export class PlayerInfoPage{
+  play:PlayerModel;
+  song:string;
+  vote:number;
   constructor(public navCtrl: NavController,public viewCtrl: ViewController,public params: NavParams,
   public playerService:PlayerService,public matchModel:MatchModel
   ) {
-  this.playerIndex=this.params.get("playerIndex");
-  this.playerIndex==1?this.matchModel.playId1=0:this.matchModel.playId2=0;
+    this.play=params.get("player");
+    this.song=params.get("song");
+    this.vote=params.get("vote")
   }
   ionViewDidLoad() {
-    this.playerService.selectAllPlayer().subscribe(res=>this.plays=res);
+
   }
   dismiss() {
     this.viewCtrl.dismiss();
   }
-  setPlayerId(id){
-    this.playerIndex==1?this.matchModel.playId1=id:this.matchModel.playId2=id;
-    this.dismiss();
-  }
+
 }

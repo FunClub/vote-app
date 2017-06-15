@@ -4,6 +4,7 @@ import {RegisterPage} from "../register/register";
 import {PlayerModel} from "../../model/player.model";
 import {PlayerService} from "../../service/player.service";
 import {HomePage} from "../home/home";
+import {PlayerPage} from "../player/player";
 
 /**
  * Generated class for the LoginPage page.
@@ -22,7 +23,6 @@ export class LoginPage {
     public playerModel:PlayerModel,public playerService:PlayerService,
     public alertCtrl: AlertController,
     public navCtrl: NavController, public navParams: NavParams) {
-
   }
 
   ionViewDidLoad() {
@@ -31,7 +31,7 @@ export class LoginPage {
   doLogin(){
     this.playerService.login(this.playerModel).subscribe(res=>{
       if(res){
-        this.navCtrl.push(HomePage);
+        this.navCtrl.push(PlayerPage);
       }else{
         let alert = this.alertCtrl.create({
           title: '账号或密码错误！',
