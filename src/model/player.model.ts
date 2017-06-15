@@ -7,4 +7,5 @@ export class PlayerModel{
   profile:string;
   city:string;
   description:string;
+  vote:number;
 }

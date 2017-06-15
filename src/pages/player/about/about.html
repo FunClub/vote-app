@@ -1,18 +1,20 @@
-<!--
-  Generated template for the AboutPage page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
-    <ion-title>about</ion-title>
+    <ion-title><ion-icon name="ios-contact"></ion-icon>个人信息</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding *ngIf="play!=undefine">
 
+  <div >
+      <img   [src]="play.profile"/>
+      <h3 class="playerInfoName">{{play.name}}—{{play.city}}</h3>
+      <p>{{play.description}}</p>
+      <button *ngIf="play.sex=='女'" ion-button block color="danger">{{play.vote}}票 <ion-icon class="good" name="thumbs-up"></ion-icon></button>
+      <button *ngIf="play.sex=='男'" ion-button block color="dark">{{play.vote}}票 <ion-icon class="good" name="thumbs-up"></ion-icon></button>
+  </div>
 </ion-content>

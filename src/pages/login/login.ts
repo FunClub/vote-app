@@ -33,13 +33,13 @@ export class LoginPage {
       if(res){
         this.navCtrl.push(PlayerPage);
       }else{
-        let alert = this.alertCtrl.create({
-          title: '账号或密码错误！',
-          subTitle: '请重新输入',
-          buttons: ['OK']
-        });
-        alert.present();
-      }
+       let alert = this.alertCtrl.create({
+       title: '账号或密码错误！',
+       subTitle: '请重新输入',
+       buttons: ['OK']
+       });
+       alert.present();
+       }
     });
   }
   gotoRegister(){

@@ -15,8 +15,8 @@
 <ion-content padding>
 
   <img id="playerProfie" [src]="play.profile"/>
-  <h3>{{play.name}}、{{play.city}}</h3>
-  <p>《{{song}}》</p>
+  <h3 class="playerInfoName">{{play.name}}—{{play.city}}</h3>
+  <p class="playerInfoSong">《{{song}}》</p>
   <p>{{play.description}}</p>
   <button *ngIf="play.sex=='女'" ion-button block color="danger">{{vote}}票 <ion-icon class="good" name="thumbs-up"></ion-icon></button>
   <button *ngIf="play.sex=='男'" ion-button block color="dark">{{vote}}票 <ion-icon class="good" name="thumbs-up"></ion-icon></button>

@@ -23,7 +23,6 @@ import {PlayerTabsPage} from "../pages/player/player-tabs/player-tabs";
 import {VotePage} from "../pages/player/vote/vote";
 import {RankPage} from "../pages/player/rank/rank";
 import {AboutPage} from "../pages/player/about/about";
-import { VsComponent } from '../pages/player/vs/vs';
 @NgModule({
   declarations: [
     MyApp

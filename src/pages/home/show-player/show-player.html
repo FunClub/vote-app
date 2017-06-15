@@ -19,7 +19,7 @@
     <ion-card *ngFor="let play of plays" >
       <img [src]="play.profile"/>
       <ion-card-content>
-        <ion-card-title>
+        <ion-card-title class="playerInfoName">
           {{play.name}}—{{play.city}}
         </ion-card-title>
         <p>
@@ -36,7 +36,7 @@
     <ion-card *ngFor="let play of plays">
       <img [src]="play.profile"/>
       <ion-card-content>
-        <ion-card-title>
+        <ion-card-title class="playerInfoName">
           {{play.name}}—{{play.city}}
         </ion-card-title>
         <p>
